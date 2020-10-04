@@ -12,7 +12,8 @@
 </p>
 
 <p align="left">
-    Clonar projeto: git clone https://github.com/PedroHenrique-git/GeradorDeSenha.git
+    Clonar projeto: git clone https://github.com/PedroHenrique-git/CrudNode.git<br>
+    obs: Essa aplicação não leva em consideração a versão mobile
 </p>
 
 <img src="imagem.png"/>
