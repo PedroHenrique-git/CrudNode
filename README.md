@@ -1,4 +1,4 @@
-<h1 align="center">Curd Node</h1>
+<h1 align="center">Crud Node</h1>
 
 <p align="left">
     <ul>
@@ -15,5 +15,3 @@
     Clonar projeto: git clone https://github.com/PedroHenrique-git/CrudNode.git<br>
     obs: Essa aplicação não leva em consideração a versão mobile
 </p>
-
-<img src="imagem.png"/>
