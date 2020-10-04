@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<div class="container-home">
+    <h1>Crud NodeJs</h1>
+
+    <%- include('includes/messages')  %>
+
+    <% if(contatos.length > 0) { %> 
+    <div class="container-table">
+        <table class="table">
+            <% contatos.forEach(contato =>{ %>
+                <tr>
+                    <td> <%= contato.nome %> </td>
+                    <td> <%= contato.sobrenome %> </td>
+                    <td> <%= contato.email %> </td>
+                    <td> <%= contato.telefone %> </td>
+                    <td> <a style="color: blue;" href="/contato/index/<%= contato.id  %> ">Editar</a> </td>
+                    <td> <a style="color: red;" href="/contato/delete/<%= contato.id  %> ">Excluir</a> </td>
+                </tr>
+            <% }); %> 
+        </table>
+    </div>
+    <% } else { %>
+        <p>Não existem contatos na sua agenda</p>
+    <% } %>
+
+</div>
+
+<%- include('includes/footer.ejs') %> 

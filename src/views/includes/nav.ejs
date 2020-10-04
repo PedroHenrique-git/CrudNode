@@ -1,0 +1,28 @@
+<header>
+    <p>
+        <a href="/">
+            Crud Node
+        </a>
+    </p>
+    <div class="links">
+        <% if(!user){ %> 
+            <p>
+                <a href="/login/index">
+                    Logar / Criar Conta
+                </a>
+            </p>
+        <% } %>
+        <% if(user){ %>
+            <p>
+                <a href="/contato/index">
+                    Criar novo contato
+                </a>
+            </p> 
+            <p>
+                <a href="/login/logout">
+                    Sair
+                </a>
+            </p>
+        <% } %>
+    </div>
+</header>
