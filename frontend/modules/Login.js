@@ -21,11 +21,7 @@ export default class Login{
     validate(e){
         const el = e.target;
         const emailInput = el.querySelector('input[name="email"]');
-        const nomeInput = el.querySelector('input[name="nome"]');
-        const sobrenomeInput = el.querySelector('input[name="sobrenome"]');
-        const telefoneInput = el.querySelector('input[name="telefone"]'); 
-
-
+        const passwordInput = el.querySelector('input[name="password"]');
         let error = false;
 
         if(!validator.isEmail(emailInput.value)){
@@ -33,18 +29,8 @@ export default class Login{
             error = true;
         }
 
-        if(nomeInput.value.length < 10 || nomeInput.value.length > 50){
-            alert('O nome precisa ter entre 10 e 50 caracteres');
-            error = true;
-        }
-
-        if(sobrenomeInput.value.length < 10 || sobrenomeInput.value.length > 50){
-            alert('O sobrenome precisa ter entre 10 e 50 caracteres');
-            error = true;
-        }
-
-        if(telefoneInput.value.length < 10){
-            alert('O telefone precisa 10 caracteres');
+        if(passwordInput.value.length < 3 || passwordInput.value.length > 50){
+            alert('A senha precisa ter entre 3 e 50 caracteres');
             error = true;
         }
 

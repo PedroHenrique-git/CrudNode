@@ -1,3 +1,5 @@
+import validator from 'validator';
+
 export default class Contato{
     constructor(formClass){
         this.form = document.querySelector(formClass);
@@ -19,7 +21,11 @@ export default class Contato{
     validate(e){
         const el = e.target;
         const emailInput = el.querySelector('input[name="email"]');
-        const passwordInput = el.querySelector('input[name="password"]');
+        const nomeInput = el.querySelector('input[name="nome"]');
+        const sobrenomeInput = el.querySelector('input[name="sobrenome"]');
+        const telefoneInput = el.querySelector('input[name="telefone"]'); 
+
+
         let error = false;
 
         if(!validator.isEmail(emailInput.value)){
@@ -27,8 +33,18 @@ export default class Contato{
             error = true;
         }
 
-        if(passwordInput.value.length < 3 || passwordInput.value.length > 50){
-            alert('A senha precisa ter entre 3 e 50 caracteres');
+        if(nomeInput.value.length < 10 || nomeInput.value.length > 50){
+            alert('O nome precisa ter entre 10 e 50 caracteres');
+            error = true;
+        }
+
+        if(sobrenomeInput.value.length < 10 || sobrenomeInput.value.length > 50){
+            alert('O sobrenome precisa ter entre 10 e 50 caracteres');
+            error = true;
+        }
+
+        if(telefoneInput.value.length < 10){
+            alert('O telefone precisa 10 caracteres');
             error = true;
         }
 
