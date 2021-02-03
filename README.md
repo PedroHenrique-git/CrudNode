@@ -4,7 +4,7 @@ a simple crud with node
 
 ## Getting Started
 
-install dependencies: <b>npm run install</b> 
+install dependencies: <b>npm install</b> 
 
 start project: <b>npm run start</b>
 
